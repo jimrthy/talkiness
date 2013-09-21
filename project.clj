@@ -1,5 +1,5 @@
 (defproject talkiness "0.1.0-SNAPSHOT"
-  :description "TODO"
+  :description "Blogging...more as a homework assignment than anything else"
   :url "TODO"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
