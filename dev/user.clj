@@ -11,9 +11,10 @@
    [clojure.string :as str]
    [clojure.test :as test]
    [clojure.tools.namespace.repl :refer (refresh refresh-all)]
-   [talkiness]))
+   [talkiness]
+   [talkiness.system :as sys]))
 
-(def system
+(def universe
   "A Var containing an object representing the application under
   development."
   nil)
@@ -23,20 +24,18 @@
   #'system."
   []
   ;; TODO
-  )
+  (alter-var-root universe sys/init))
 
 (defn start
   "Starts the system running, updates the Var #'system."
   []
-  ;; TODO
-  )
+  (alter-var-root universe sys/start!))
 
 (defn stop
   "Stops the system if it is currently running, updates the Var
   #'system."
   []
-  ;; TODO
-  )
+  (alter-var-root universe sys/kill!))
 
 (defn go
   "Initializes and starts the system running."
